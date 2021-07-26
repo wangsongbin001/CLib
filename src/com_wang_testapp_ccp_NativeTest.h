@@ -12,8 +12,8 @@ extern "C" {
  * Method:    sayHello
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_wang_testapp_ccp_NativeTest_sayHello
-  (JNIEnv *, jclass);
+JNIEXPORT jstring JNICALL Java_com_wang_testapp_ccp_NativeTest_sayHello
+  (JNIEnv *, jclass, jstring);
 
 /*
  * Class:     com_wang_testapp_ccp_NativeTest
@@ -22,6 +22,22 @@ JNIEXPORT void JNICALL Java_com_wang_testapp_ccp_NativeTest_sayHello
  */
 JNIEXPORT jstring JNICALL Java_com_wang_testapp_ccp_NativeTest_getString
   (JNIEnv *, jclass);
+
+/**
+ *
+ * @return
+ */
+JNIEXPORT jint JNICALL Java_com_wang_testapp_ccp_NativeTest_getProperties
+        (JNIEnv *, jobject);
+
+JNIEXPORT void JNICALL Java_com_wang_testapp_ccp_NativeTest_callStaticMethod
+        (JNIEnv *, jclass);
+
+JNIEXPORT void JNICALL Java_com_wang_testapp_ccp_NativeTest_callInstanceMethod
+        (JNIEnv *, jclass);
+
+JNIEXPORT jstring JNICALL Java_com_wang_testapp_ccp_NativeTest_testPoint
+        (JNIEnv *, jclass);
 
 #ifdef __cplusplus
 }
